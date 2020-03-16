@@ -32,5 +32,12 @@ public class MaximumTest {
         Integer maximumInteger = findMaximum.findMaximumInteger(3, 1, 2);
         Assert.assertEquals((Integer) 3, maximumInteger);
     }
+
+    //TEST CASE 1.1
+    @Test
+    public void givenThreeValue_NotNull_True() {
+        findMaximum.findMaximumFloat(1.2f,2.2f,3.3f);
+        Assert.assertNotNull(findMaximum);
+    }
 }
 

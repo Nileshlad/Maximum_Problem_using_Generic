@@ -67,5 +67,26 @@ public class MaximumTest {
         findMaximum.findMaximumString("1","2","3");
         Assert.assertNotNull(findMaximum);
     }
+
+    //TEST CASE 3.2
+    @Test
+    public void givenThreeString_WhenMaximumFoundAtPosition1_ThenReturnMaximum() {
+        String maximumString= findMaximum.findMaximumString("1", "2", "3");
+        Assert.assertEquals((Integer) 3, maximumString);
+    }
+
+    //TEST CASE 3.3
+    @Test
+    public void givenThreeString_WhenMaximumFoundAtPosition2_ThenReturnMaximum() {
+        String maximumString= findMaximum.findMaximumString("3", "2", "1");
+        Assert.assertEquals((Integer) 3, maximumString);
+    }
+
+    //TEST CASE 3.4
+    @Test
+    public void givenThreeString_WhenMaximumFoundAtPosition3_ThenReturnMaximum() {
+        String maximumString= findMaximum.findMaximumString("3", "1", "2");
+        Assert.assertEquals((Integer) 3, maximumString);
+    }
 }
 

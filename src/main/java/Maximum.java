@@ -24,4 +24,5 @@ public class Maximum
         System.out.println("WELCOME TEST MAXIMUM AND GENERIC");
         Maximum maximum = new Maximum();
         }
+
 }

@@ -1,23 +1,21 @@
 public class Maximum
 {
     //TO METHOD
-    public void findMaximumInteger()
-    {
-        //To use array
-        int[] array = new int[]{10,20,30};
-        int currentMax = array[0];
-        for(int index=1;index<=array.length-1;index++){
-            if(currentMax < array[index]){
-                currentMax = array[index];
-            }
-        }
-        System.out.println("Maximum value is "+ currentMax);
+    public static Integer findMaximumInteger(Integer oneValue, Integer twoValue, Integer threeValue) {
+        Integer maximumValue = oneValue;
+        if (oneValue.compareTo(maximumValue) > 0)
+            maximumValue = twoValue;
+        if (threeValue.compareTo(maximumValue) > 0)
+            maximumValue = threeValue;
+        return maximumValue;
     }
 
     //TO MAIN METHOD AND CREATE OBJECT AND OBJECT CALL
     public static void main(String[] args) {
         System.out.println("WELCOME TEST MAXIMUM AND GENERIC");
         Maximum maximum = new Maximum();
-        maximum.findMaximumInteger();
-    }
+        }
+
+
+
 }

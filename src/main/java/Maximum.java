@@ -20,6 +20,16 @@ public class Maximum
         return maximumValue;
     }
 
+    //TO METHOD String VALUE
+    public static String findMaximumString(String oneValue, String twoValue, String threeValue) {
+        String maximumValue = oneValue;
+        if (oneValue.compareTo(maximumValue) > 0)
+            maximumValue = twoValue;
+        if (threeValue.compareTo(maximumValue) > 0)
+            maximumValue = threeValue;
+        return maximumValue;
+    }
+
     //TO MAIN METHOD AND CREATE OBJECT
     public static void main(String[] args) {
         System.out.println("WELCOME TEST MAXIMUM AND GENERIC");

@@ -60,5 +60,12 @@ public class MaximumTest {
         Float maximumFloat = findMaximum.findMaximumFloat(3.3f, 2.2f, 1.1f);
         Assert.assertEquals((Float) 3.3f, maximumFloat);
     }
+
+    //TEST CASE 3.1
+    @Test
+    public void givenStringValue_NotNull_True() {
+        findMaximum.findMaximumString("1","2","3");
+        Assert.assertNotNull(findMaximum);
+    }
 }
 

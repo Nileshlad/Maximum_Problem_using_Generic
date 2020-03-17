@@ -1,25 +1,25 @@
-public class Maximum<U extends Comparable> {
-    U oneValue;
-    U twoValue;
-    U threeValue;
+public class Maximum<N extends Comparable> {
+    N oneValue;
+    N twoValue;
+    N threeValue;
 
     //TO CONSTRICTOR
-    public Maximum(U oneValue, U twoValue, U threeValue) {
+    public Maximum(N oneValue, N twoValue, N threeValue) {
         this.oneValue = oneValue;
         this.twoValue = twoValue;
         this.threeValue = threeValue;
     }
 
-    //COMPILABLE METHOD
-    public U testMaximum() {
-        U maximum = testMaximum(oneValue, twoValue, threeValue);
-        printMax(maximum);
+    //
+    public N testMaximum() {
+        N maximum = testMaximum(oneValue, twoValue, threeValue);
+        printMaximum(maximum);
         return maximum;
     }
 
     //TO USE GENERIC
-    public static <U extends Comparable> U testMaximum(U oneValue, U twoValue, U threeValue) {
-        U maximumValue = oneValue;
+    public static <N extends Comparable> N testMaximum(N oneValue, N twoValue, N threeValue) {
+        N maximumValue = oneValue;
         if (twoValue.compareTo(maximumValue) > 0)
             maximumValue = twoValue;
         if (threeValue.compareTo(maximumValue) > 0)
@@ -27,7 +27,8 @@ public class Maximum<U extends Comparable> {
         return maximumValue;
     }
 
-    public static <U> void printMax(U maximum) {
+    //TO GENERIC CLASS
+    public static <N> void printMaximum(N maximum) {
         System.out.println(maximum);
     }
 

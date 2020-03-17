@@ -1,39 +1,37 @@
-public class Maximum
-{
-    //TO METHOD INTEGER VALUE
-    public static Integer findMaximumInteger(Integer oneValue, Integer twoValue, Integer threeValue) {
-        Integer maximumValue = oneValue;
-        if (oneValue.compareTo(maximumValue) > 0)
+public class Maximum<U extends Comparable> {
+    U oneValue;
+    U twoValue;
+    U threeValue;
+
+    //TO CONSTRICTOR
+    public Maximum(U oneValue, U twoValue, U threeValue) {
+        this.oneValue = oneValue;
+        this.twoValue = twoValue;
+        this.threeValue = threeValue;
+    }
+    //COMPILABLE METHOD
+    public U testMaximum() {
+        U maximum = testMaximum(oneValue,twoValue,threeValue);
+        printMax(maximum);
+        return maximum;
+    }
+
+    //TO USE GENERIC
+    public static <U extends Comparable> U testMaximum(U oneValue, U twoValue, U threeValue) {
+        U maximumValue = oneValue;
+        if (twoValue.compareTo(maximumValue) > 0)
             maximumValue = twoValue;
         if (threeValue.compareTo(maximumValue) > 0)
             maximumValue = threeValue;
         return maximumValue;
     }
 
-    //TO METHOD FLOAT VALUE
-    public static Float findMaximumFloat(Float oneValue, Float twoValue, Float threeValue) {
-        Float maximumValue = oneValue;
-        if (oneValue.compareTo(maximumValue) > 0)
-            maximumValue = twoValue;
-        if (threeValue.compareTo(maximumValue) > 0)
-            maximumValue = threeValue;
-        return maximumValue;
+    public static <U> void printMax(U maximum){
+        System.out.println(maximum);
     }
 
-    //TO METHOD String VALUE
-    public static String findMaximumString(String oneValue, String twoValue, String threeValue) {
-        String maximumValue = oneValue;
-        if (oneValue.compareTo(maximumValue) > 0)
-            maximumValue = twoValue;
-        if (threeValue.compareTo(maximumValue) > 0)
-            maximumValue = threeValue;
-        return maximumValue;
-    }
-
-    //TO MAIN METHOD AND CREATE OBJECT
+    //TO MAIN METHOD
     public static void main(String[] args) {
-        System.out.println("WELCOME TEST MAXIMUM AND GENERIC");
-        Maximum maximum = new Maximum();
-        }
-
+        System.out.println("Welcome To Find Maximum Problem Using Generics");
+    }
 }
